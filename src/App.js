@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import logo from './logo.svg';
 import './App.css';
 import './mock';
@@ -25,6 +26,11 @@ class App extends Component {
 				<p className="App-intro">
 					To get started, edit <code>src/App.js</code> and save to reload.
         		</p>
+				<ul role="nav">
+					<li><Link to="/children1">children1</Link></li>
+					<li><Link to="/children2">children2</Link></li>
+				</ul>
+				{this.props.children}
 			</div>
 		);
 	}
